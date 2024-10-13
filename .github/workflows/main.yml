@@ -28,6 +28,9 @@ jobs:
       - name: Setup SonarQube
         uses: warchant/setup-sonar-scanner@v7
 
+      - name: "output call between steps"
+        run: |
+              echo "Output [${{secrets.SONAR_ORGANIZATION}},${{ secrets.SONAR_PROJECT_KEY }} ]" 
       # Run Sonar scanner
       - name: SonarQube scan
         run: |
