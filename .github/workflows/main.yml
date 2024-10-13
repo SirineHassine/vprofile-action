@@ -97,4 +97,4 @@ jobs:
           chart-path: helm/vprofilecharts
           namespace: default
           values: appimage=${{secrets.REGISTRY}}/${{env.ECR_REPOSITORY}},${{github.run_number}}
-          name: release_name
+          name: vproffile-stack
