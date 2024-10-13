@@ -31,8 +31,8 @@ jobs:
       # Run Sonar scanner
       - name: SonarQube scan
         run: sonar-scanner -Dsonar.host.url= ${{secrets.SONAR_URL}}
-          -Dsonar.login= ${{secrets.SONAR_TOKEN}}
-          -Dsonar.organization= ${{secrets.SONAR_ORGANIZATION}}
+          -Dsonar.login= ${{secrets.SONAR_TOKEN}}                                           
+          -Dsonar.organization= ${{secrets.SONAR_ORGANIZATON}}
           -Dsonar.projectKey= ${{secrets.SONAR_PROJECT_KEY}}
           -Dsonar.sources= src/
           -Dsonar.junit.reportPath=target/surefire-reports/
