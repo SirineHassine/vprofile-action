@@ -31,7 +31,7 @@ jobs:
       # Run Sonar scanner
       - name: SonarQube scan
         #run:  sonar-scanner -Dsonar.host.url=${{ secrets.SONAR_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }} -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} -Dsonar.sources=src/ -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
-        run:  sonar-scanner -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.login=b87a1aa38227d73397ccf999671aece3a38544eb -Dsonar.organization=vprofile-org-actions -Dsonar.projectKey=vprofile-actions -Dsonar.sources=src/ -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
+        run:  sonar-scanner -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.login=b87a1aa38227d73397ccf999671aece3a38544eb -Dsonar.organization=vprofile-org-actions -Dsonar.projectKey=vprofile-org-actions_vprofile-actions -Dsonar.sources=src/ -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
         # Check the quality Gate status
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
