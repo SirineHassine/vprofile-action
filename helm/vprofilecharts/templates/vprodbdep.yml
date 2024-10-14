@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: vprodb
-        image: vprodb:{{ .Values.apptag}}
-        #image: sirinehassine/vprofiledb 
+        image: sirinehassine/vprofiledb 
         ports:
         - name: vprodb-port
           containerPort: 3306
