@@ -10,4 +10,10 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 COPY --from=BUILD_IMAGE vprofile-project/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
+# Catanlina sert a démarrer ou arrete apache Tomcat. Path : /usr/local/tomcat/bin/catalina.sh
+# ./catalina.sh start : Démarre Tomcat en tant que processus de fond (background).
+# ./catalina.sh stop : Arrête le serveur Tomcat
+# ./catalina.sh run : Démarre Tomcat en premier plan (foreground) dans la console
+
+
 CMD ["catalina.sh", "run"]
